@@ -27,6 +27,10 @@ public class Posicion {
 		}
 		this.columna = columna;
 	}
+	public Posicion(int fila, char columna) throws IllegalAccessException {
+		setFila(fila);
+		setColumna(columna);
+	}
 	
 	
 }
