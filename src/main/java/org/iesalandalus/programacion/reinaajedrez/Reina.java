@@ -24,4 +24,9 @@ public class Reina {
 		}
 		this.posicion = posicion;
 	}
+	public Reina() throws IllegalAccessException {
+		color=Color.BLANCO;
+		posicion = new Posicion(1, 'd');
+	}
+	
 }
