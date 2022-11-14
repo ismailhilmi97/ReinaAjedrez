@@ -32,5 +32,12 @@ public class Posicion {
 		setColumna(columna);
 	}
 	
+	public Posicion (Posicion posicion) throws IllegalAccessException {
+		if(posicion==null) {
+			throw new NullPointerException("La posicion no puede ser nula");
+		}
+		setFila(posicion.getFila());
+		setColumna(posicion.getColumna());
+	}
 	
 }
