@@ -55,6 +55,12 @@ public class Posicion {
 		Posicion other = (Posicion) obj;
 		return columna == other.columna && fila == other.fila;
 	}
+	///////////////////////////////////////////////////////////////////////////
+	@Override
+	public String toString() {
+		return String.format("Posicion fila=%s, columna=%s", fila, columna);
+	}
+	
 	
 	
 	
