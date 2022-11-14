@@ -19,8 +19,8 @@ public class Posicion {
 		return columna;
 	}
 	private void setColumna(char columna) throws IllegalAccessException {
-		if(columna!='a' && columna!='b' && columna!='c' && columna!='d' && columna!='e' && columna!='f' && columna!='g' && columna!='h' 
-		   && columna!='A' && columna!='B' && columna!='C' && columna!='D' && columna!='E' && columna!='F' && columna!='G' && columna!='H') {
+		if(columna!='a' || columna!='b' || columna!='c' || columna!='d' || columna!='e' || columna!='f' || columna!='g' || columna!='h' 
+		   || columna!='A' || columna!='B' || columna!='C' || columna!='D' || columna!='E' || columna!='F' || columna!='G' || columna!='H') {
 			
 			throw new IllegalAccessException("La columna debe ser una caracter entre a y h");
 			
