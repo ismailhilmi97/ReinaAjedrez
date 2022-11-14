@@ -29,4 +29,17 @@ public class Reina {
 		posicion = new Posicion(1, 'd');
 	}
 	
+	public Reina(Color color) throws IllegalAccessException {
+		this();
+		if(color==Color.BLANCO) {
+			posicion = new Posicion(1, 'd');
+		}
+		else if(color==Color.NEGRA) {
+			posicion = new Posicion(8, 'd');
+		}
+		setColor(color);
+	}
+	
+	
+	
 }
