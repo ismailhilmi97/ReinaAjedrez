@@ -2,7 +2,7 @@ package org.iesalandalus.programacion.reinaajedrez.modelo;
 
 public enum Color {
 	
-	BLANCO("Blanco"),NEGRA("Negro");
+	BLANCO("Blanco"),NEGRO("Negra");
 	
 	//ATRIBUTO
 	private String cadenaAMostrar;
