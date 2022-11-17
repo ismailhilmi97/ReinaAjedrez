@@ -45,17 +45,7 @@ public class Consola {
 					break;
 
 				case 3: // Mover
-					try {
-						System.out.println("*******Mover la reina*******");
-						Reina reina3 = new Reina(Consola.elegirColor());
-						System.out.println("Posicion Actual: " + reina3.toString());
-						System.out.println();
-						reina3.mover(Consola.elegirDireccion(), Consola.elegirPasos());
-						System.out.println("La nueva posicion: "+reina3.toString());
-						System.out.println();
-					} catch (Exception e) {
-						System.out.println(e.getMessage());
-					}
+					MainApp.mover();
 					break;
 
 				case 4: // Salir

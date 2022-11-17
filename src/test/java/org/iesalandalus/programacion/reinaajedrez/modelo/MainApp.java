@@ -39,7 +39,7 @@ public class MainApp {
 	}
 	
 	
-	void mover() throws OperationNotSupportedException {
+	static void mover() throws OperationNotSupportedException {
 		try {
 			System.out.println("*******Mover la reina*******");
 			Reina reina3 = new Reina(Consola.elegirColor());
