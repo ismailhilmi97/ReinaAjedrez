@@ -22,24 +22,32 @@ public class Posicion {
 			return columna;
 		}
 		private void setColumna(char columna) throws IllegalAccessException {
-			if(columna>'h') {
+			if(columna>'h' || columna<'a') {
 				
 				throw new IllegalAccessException("La columna debe ser una caracter entre a y h");
 				
 			}
 			this.columna = columna;
 		}
-		public Posicion(int fila, char columna) throws IllegalAccessException {
-			setFila(fila);
-			setColumna(columna);
+		
+		//CONSTRUCTORES
+		public Posicion(int fila, char columna) {
+			if(fila>8 || fila<1) {
+				throw new IllegalArgumentException("ERROR: Fila no válida.");
+			}
+			this.fila=fila;
+			if(columna>'h' || columna<'a') {
+				throw new IllegalArgumentException("ERROR: Columna no válida.");
+			}
+			this.columna=columna;
 		}
 		
-		public Posicion (Posicion posicion) throws IllegalAccessException {
+		public Posicion (Posicion posicion) {
 			if(posicion==null) {
-				throw new NullPointerException("La posicion no puede ser nula");
+				throw new NullPointerException("ERROR: No es posible copiar una posición nula.");
 			}
-			setFila(posicion.getFila());
-			setColumna(posicion.getColumna());
+			this.fila=posicion.getFila();
+			this.columna=posicion.getColumna();
 		}
 		//////////////////////////////////////////////////////////////////////////
 		@Override
@@ -58,7 +66,7 @@ public class Posicion {
 		///////////////////////////////////////////////////////////////////////////
 		@Override
 		public String toString() {
-			return String.format("Posicion fila=%s, columna=%s", fila, columna);
+			return String.format("fila=%s, columna=%s", fila, columna);
 		}
 
 }
